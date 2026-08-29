@@ -1,0 +1,293 @@
+/* ===== ACTION GAMES PAGE — Fire & Lava Theme ===== */
+
+body.action-page {
+  background: #0a0000;
+  color: #ffe0c0;
+  overflow-x: hidden;
+}
+
+/* ===== LAVA BACKGROUND ===== */
+.lava-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 110%, #ff4400 0%, #880000 40%, #0a0000 70%);
+  animation: lavaPulse 4s ease-in-out infinite;
+}
+
+@keyframes lavaPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.75; }
+}
+
+/* Lava cracks */
+.lava-cracks {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(135deg, transparent 45%, rgba(255,80,0,0.08) 45%, rgba(255,80,0,0.08) 55%, transparent 55%),
+    linear-gradient(45deg,  transparent 45%, rgba(255,120,0,0.06) 45%, rgba(255,120,0,0.06) 55%, transparent 55%);
+  background-size: 120px 120px, 80px 80px;
+  animation: crackShift 6s linear infinite;
+}
+
+@keyframes crackShift {
+  from { background-position: 0 0, 0 0; }
+  to   { background-position: 120px 120px, 80px 80px; }
+}
+
+/* ===== FLAMES ===== */
+.flames-container {
+  position: fixed;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.flame {
+  width: 40px;
+  height: 80px;
+  position: relative;
+  animation: flameDance var(--dur, 1.5s) ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+.flame::before,
+.flame::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 20% 20%;
+}
+
+.flame::before {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #ffcc00 0%, #ff6600 50%, transparent 100%);
+  animation: flameInner var(--dur, 1.5s) ease-in-out infinite alternate;
+}
+
+.flame::after {
+  width: 60%;
+  height: 70%;
+  background: radial-gradient(ellipse at bottom, #fff 0%, #ffcc00 40%, transparent 100%);
+  animation: flameOuter var(--dur, 1.5s) ease-in-out infinite alternate-reverse;
+}
+
+@keyframes flameDance {
+  0%   { transform: scaleX(1)   scaleY(1)   skewX(0deg); }
+  25%  { transform: scaleX(0.9) scaleY(1.1) skewX(-4deg); }
+  50%  { transform: scaleX(1.1) scaleY(0.95) skewX(3deg); }
+  75%  { transform: scaleX(0.95) scaleY(1.05) skewX(-2deg); }
+  100% { transform: scaleX(1)   scaleY(1.08) skewX(1deg); }
+}
+
+@keyframes flameInner {
+  from { transform: translateX(-50%) scaleX(1); }
+  to   { transform: translateX(-50%) scaleX(0.85); }
+}
+
+@keyframes flameOuter {
+  from { transform: translateX(-50%) scaleY(1); }
+  to   { transform: translateX(-50%) scaleY(0.8); }
+}
+
+/* ===== ACTION HERO ===== */
+.action-hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 2rem 3rem;
+}
+
+.action-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow:
+    0 0 20px #ff4400,
+    0 0 60px #ff4400,
+    0 0 100px rgba(255,68,0,0.5);
+  animation: fireFlicker 2s ease-in-out infinite;
+}
+
+@keyframes fireFlicker {
+  0%, 100% { text-shadow: 0 0 20px #ff4400, 0 0 60px #ff4400, 0 0 100px rgba(255,68,0,0.5); }
+  25%       { text-shadow: 0 0 30px #ff6600, 0 0 80px #ff6600, 0 0 130px rgba(255,100,0,0.6); }
+  75%       { text-shadow: 0 0 15px #ff2200, 0 0 40px #ff2200, 0 0 70px rgba(255,0,0,0.4); }
+}
+
+.action-subtitle {
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  letter-spacing: 3px;
+  color: rgba(255,200,150,0.8);
+  margin: 1rem 0 2.5rem;
+  text-transform: uppercase;
+  animation: fadeUp 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+/* ===== RACING CAR ANIMATION ===== */
+.racing-track {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(#1a0000, #2a0a00);
+  border-top: 2px solid #ff4400;
+  border-bottom: 2px solid #ff4400;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.racing-track::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(90deg, #ff6600 0px, #ff6600 30px, transparent 30px, transparent 60px);
+  transform: translateY(-50%);
+  animation: roadMove 0.5s linear infinite;
+}
+
+@keyframes roadMove {
+  from { transform: translateY(-50%) translateX(0); }
+  to   { transform: translateY(-50%) translateX(60px); }
+}
+
+.race-car {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  animation: carRace 4s linear infinite;
+  filter: drop-shadow(0 0 10px #ff4400);
+}
+
+@keyframes carRace {
+  from { left: -80px; }
+  to   { left: calc(100% + 80px); }
+}
+
+/* Exhaust trail */
+.race-car::after {
+  content: '💨';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  animation: exhaustPuff 0.4s ease-in-out infinite;
+}
+
+@keyframes exhaustPuff {
+  0%   { opacity: 1;  transform: translateY(-50%) scaleX(1); }
+  100% { opacity: 0;  transform: translateY(-50%) scaleX(2) translateX(-10px); }
+}
+
+/* ===== ACTION GAME CARDS ===== */
+.action-section {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem 6rem;
+}
+
+.game-card.fire-card {
+  background: rgba(255, 68, 0, 0.08);
+  border-color: rgba(255,100,0,0.3);
+  color: #ffe0c0;
+  transition: all 0.35s;
+}
+
+.game-card.fire-card:hover {
+  background: rgba(255, 68, 0, 0.18);
+  border-color: #ff4400;
+  box-shadow:
+    0 0 30px rgba(255,68,0,0.4),
+    0 20px 40px rgba(0,0,0,0.5);
+}
+
+.game-card.fire-card h3 { color: #ff6622; }
+.game-card.fire-card .card-icon { animation: iconFire 1.5s ease-in-out infinite alternate; }
+
+@keyframes iconFire {
+  from { transform: scale(1)    rotate(0deg);  filter: drop-shadow(0 0 5px #ff4400); }
+  to   { transform: scale(1.1)  rotate(3deg);  filter: drop-shadow(0 0 15px #ff6600); }
+}
+
+/* ===== EXPLOSION PARTICLES ===== */
+.explosion-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+  border-radius: 50%;
+  border: 3px solid #ff4400;
+  transform: translate(-50%, -50%);
+  animation: explodeRing 3s ease-out infinite;
+  pointer-events: none;
+}
+
+.explosion-ring:nth-child(2) { animation-delay: 1s; border-color: #ff6600; }
+.explosion-ring:nth-child(3) { animation-delay: 2s; border-color: #ffcc00; }
+
+@keyframes explodeRing {
+  0%   { width: 0;     height: 0;     opacity: 1; }
+  100% { width: 300px; height: 300px; opacity: 0; }
+}
+
+/* ===== BULLET TRAIL ===== */
+.bullet-trail {
+  position: fixed;
+  top: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff4400, #ffcc00, transparent);
+  animation: bulletFly 2s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 2px;
+  width: 120px;
+}
+
+@keyframes bulletFly {
+  from { left: -150px; transform: translateY(-50%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  to   { left: 110%;  transform: translateY(-50%); opacity: 0; }
+}
+
+/* NAV */
+body.action-page .nav-logo { color: #ff6622; }
+body.action-page .nav-links a:hover { color: #ff6622; }
+
+/* footer */
+body.action-page .site-footer {
+  color: rgba(255,180,100,0.35);
+  border-top-color: rgba(255,68,0,0.1);
+}
+
+.action-section .section-title { color: #ff6622; }
+.action-section .section-subtitle { color: rgba(255,200,150,0.65); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .flames-container .flame:nth-child(n+6) { display: none; }
+  .racing-track { height: 60px; }
+}

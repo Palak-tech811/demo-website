@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Arena — Enter the Arena</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body class="home-page">
+
+  <!-- Backgrounds -->
+  <div class="grid-overlay"></div>
+  <div class="starfield" id="starfield"></div>
+
+  <!-- Floating game icons -->
+  <div class="floating-icons" id="floatIcons"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html">⚡ GAME ARENA</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html"  class="active">Home</a></li>
+      <li><a href="action.html">Action</a></li>
+      <li><a href="puzzle.html">Puzzle &amp; Adventure</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <!-- Orbit rings -->
+    <div class="orbit-ring"></div>
+    <div class="orbit-ring"></div>
+    <div class="orbit-ring"></div>
+
+    <h1 class="hero-logo" data-text="GAME ARENA">GAME ARENA</h1>
+
+    <p class="hero-tagline">
+      Where Champions Are Born<span></span>
+    </p>
+
+    <div class="hero-btns">
+      <a href="action.html"   class="btn btn-neon">Enter Arena</a>
+      <a href="feedback.html" class="btn btn-neon-purple">Leave Feedback</a>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES STRIP ===== -->
+  <div class="features-strip">
+    <div class="feature-item delay-1 fade-up">
+      <span class="feature-icon">🎮</span>
+      <span>100+ Games</span>
+    </div>
+    <div class="feature-item delay-2 fade-up">
+      <span class="feature-icon">⚡</span>
+      <span>Ultra Fast</span>
+    </div>
+    <div class="feature-item delay-3 fade-up">
+      <span class="feature-icon">🏆</span>
+      <span>Leaderboards</span>
+    </div>
+    <div class="feature-item delay-4 fade-up">
+      <span class="feature-icon">🌐</span>
+      <span>Multiplayer</span>
+    </div>
+    <div class="feature-item delay-5 fade-up">
+      <span class="feature-icon">🔥</span>
+      <span>Daily Challenges</span>
+    </div>
+  </div>
+
+  <!-- ===== GAMES PREVIEW ===== -->
+  <section class="home-games-section">
+    <h2 class="section-title fade-up">Choose Your Battle</h2>
+    <p class="section-subtitle fade-up delay-1">Four epic game categories await you</p>
+
+    <div class="games-grid">
+      <!-- Card 1 -->
+      <a href="action.html" class="game-card neon-card fade-up delay-1" style="text-decoration:none;">
+        <div style="position:relative;">
+          <div class="explosion-ring"></div>
+          <div class="explosion-ring"></div>
+          <div class="explosion-ring"></div>
+        </div>
+        <span class="card-icon">🔫</span>
+        <h3>Action Games</h3>
+        <p>Unleash chaos. FPS, racing, and fighting games that keep your adrenaline pumping non-stop.</p>
+        <div style="margin-top:1rem; color:#00ffcc; font-size:0.85rem; letter-spacing:2px;">PLAY NOW →</div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="puzzle.html" class="game-card neon-card fade-up delay-2" style="text-decoration:none;">
+        <span class="card-icon">🧩</span>
+        <h3>Puzzle &amp; Adventure</h3>
+        <p>Challenge your mind with immersive puzzles, epic RPGs, and strategic adventures.</p>
+        <div style="margin-top:1rem; color:#00ffcc; font-size:0.85rem; letter-spacing:2px;">PLAY NOW →</div>
+      </a>
+
+      <!-- Card 3 -->
+      <div class="game-card neon-card fade-up delay-3">
+        <span class="card-icon">🏎️</span>
+        <h3>Racing</h3>
+        <p>Feel the speed. Race through neon highways, futuristic tracks, and off-road terrains.</p>
+        <div style="margin-top:1rem; color:#00ffcc; font-size:0.85rem; letter-spacing:2px;">COMING SOON</div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="game-card neon-card fade-up delay-4">
+        <span class="card-icon">🕹️</span>
+        <h3>Retro Arcade</h3>
+        <p>Revisit the golden age. Classic pixel games reimagined for the modern gamer.</p>
+        <div style="margin-top:1rem; color:#00ffcc; font-size:0.85rem; letter-spacing:2px;">COMING SOON</div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="game-card neon-card fade-up delay-5">
+        <span class="card-icon">🌌</span>
+        <h3>Space &amp; Sci-Fi</h3>
+        <p>Explore the cosmos. Shoot down alien fleets, colonize planets, and survive the void.</p>
+        <div style="margin-top:1rem; color:#00ffcc; font-size:0.85rem; letter-spacing:2px;">COMING SOON</div>
+      </div>
+
+      <!-- Card 6 — Feedback -->
+      <a href="feedback.html" class="game-card neon-card fade-up delay-5" style="text-decoration:none;">
+        <span class="card-icon">⭐</span>
+        <h3>Rate &amp; Review</h3>
+        <p>Your voice matters. Share your feedback, rate games, and help shape the arena's future.</p>
+        <div style="margin-top:1rem; color:#00ffcc; font-size:0.85rem; letter-spacing:2px;">GIVE FEEDBACK →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== STATS BANNER ===== -->
+  <div style="position:relative;z-index:1;background:rgba(0,255,204,0.04);border-top:1px solid rgba(0,255,204,0.12);border-bottom:1px solid rgba(0,255,204,0.12);padding:3rem 2rem;text-align:center;">
+    <h2 class="section-title fade-up" style="color:#fff;margin-bottom:2.5rem;">Arena Stats</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:3rem;">
+      <div class="fade-up delay-1">
+        <div style="font-family:'Orbitron',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#00ffcc;text-shadow:0 0 20px #00ffcc;">2.5M+</div>
+        <div style="font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:rgba(200,200,255,0.6);">Players</div>
+      </div>
+      <div class="fade-up delay-2">
+        <div style="font-family:'Orbitron',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#ff00cc;text-shadow:0 0 20px #ff00cc;">100+</div>
+        <div style="font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:rgba(200,200,255,0.6);">Games</div>
+      </div>
+      <div class="fade-up delay-3">
+        <div style="font-family:'Orbitron',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#9900ff;text-shadow:0 0 20px #9900ff;">50K+</div>
+        <div style="font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:rgba(200,200,255,0.6);">Daily Matches</div>
+      </div>
+      <div class="fade-up delay-4">
+        <div style="font-family:'Orbitron',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#00ccff;text-shadow:0 0 20px #00ccff;">4.9★</div>
+        <div style="font-size:0.85rem;letter-spacing:2px;text-transform:uppercase;color:rgba(200,200,255,0.6);">Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2025 Game Arena — All Rights Reserved &nbsp;|&nbsp; Built with ❤️ &amp; CSS
+  </footer>
+
+  <!-- ===== JS — stars, floating icons, nav ===== -->
+  <script>
+    // Starfield
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `
+        width:${size}px; height:${size}px;
+        top:${Math.random()*100}%; left:${Math.random()*100}%;
+        --dur:${(Math.random()*3+2).toFixed(1)}s;
+        animation-delay:${(Math.random()*3).toFixed(1)}s;
+      `;
+      sf.appendChild(s);
+    }
+
+    // Floating icons
+    const icons = ['🎮','🕹️','🔫','🏆','⚡','🎯','👾','💣','🛡️','🗡️','🎲','🚀'];
+    const fi = document.getElementById('floatIcons');
+    icons.forEach((ic, i) => {
+      const el = document.createElement('div');
+      el.className = 'float-icon';
+      el.textContent = ic;
+      el.style.cssText = `
+        top:${10 + Math.random()*80}%;
+        left:${5 + Math.random()*90}%;
+        --dur:${(6 + Math.random()*8).toFixed(1)}s;
+        animation-delay:${(Math.random()*4).toFixed(1)}s;
+      `;
+      fi.appendChild(el);
+    });
+
+    // Hamburger nav
+    const hb = document.getElementById('hamburger');
+    const nl = document.getElementById('navLinks');
+    hb.addEventListener('click', () => nl.classList.toggle('open'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Arena — Puzzle &amp; Adventure</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/puzzle.css" />
+</head>
+<body class="puzzle-page">
+
+  <!-- Backgrounds -->
+  <div class="forest-bg"></div>
+
+  <!-- Falling Leaves -->
+  <div id="leaves"></div>
+
+  <!-- Fireflies -->
+  <div id="fireflies"></div>
+
+  <!-- Floating Puzzle Pieces -->
+  <div class="puzzle-pieces-container" id="puzzlePieces"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a class="nav-logo" href="index.html">🌿 GAME ARENA</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="action.html">Action</a></li>
+      <li><a href="puzzle.html" class="active">Puzzle &amp; Adventure</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PUZZLE HERO ===== -->
+  <section class="puzzle-hero">
+    <div class="treasure-chest" title="Click me!">🪄</div>
+    <h1 class="puzzle-title fade-up">PUZZLE REALM</h1>
+    <p class="puzzle-subtitle fade-up delay-1">Think. Explore. Conquer.</p>
+    <div class="hero-btns fade-up delay-2">
+      <a href="feedback.html" class="btn btn-forest">Leave Feedback</a>
+      <a href="action.html" class="btn" style="background:transparent;border:2px solid rgba(0,200,100,0.4);color:#00cc66;">← Action Zone</a>
+    </div>
+  </section>
+
+  <!-- ===== PLATFORMER STRIP ===== -->
+  <div style="position:relative;z-index:1;">
+    <div class="platformer-strip">
+      <!-- Platforms -->
+      <div class="platform" style="width:120px; animation-duration:5s; bottom:25px;"></div>
+      <div class="platform" style="width:80px;  animation-duration:6.5s; animation-delay:2s; bottom:50px;"></div>
+      <div class="platform" style="width:150px; animation-duration:8s; animation-delay:1s; bottom:15px;"></div>
+      <div class="platform" style="width:60px;  animation-duration:4.5s; animation-delay:3s; bottom:60px;"></div>
+      <!-- Character -->
+      <div class="platform-char">🧝</div>
+    </div>
+  </div>
+
+  <!-- ===== PUZZLE GAME CARDS ===== -->
+  <section class="puzzle-section page-section" style="padding-top:3rem;">
+    <h2 class="section-title fade-up">🧩 Puzzle &amp; Adventure</h2>
+    <p class="section-subtitle fade-up delay-1">Challenge your mind. Embark on epic journeys.</p>
+
+    <div class="games-grid">
+      <!-- Puzzle Games -->
+      <div class="game-card forest-card fade-up delay-1">
+        <span class="card-icon">🧩</span>
+        <h3>Classic Puzzles</h3>
+        <p>Arrange, match, and solve hundreds of increasingly mind-bending puzzles. Logic is your superpower.</p>
+        <br/>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;">
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Match-3</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Jigsaw</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Sudoku</span>
+        </div>
+      </div>
+
+      <!-- RPG -->
+      <div class="game-card forest-card fade-up delay-2">
+        <span class="card-icon">⚔️</span>
+        <h3>Role-Playing Games</h3>
+        <p>Forge your legend. Choose your class, master abilities, and embark on quests that shape the world.</p>
+        <br/>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;">
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">JRPG</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Action RPG</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Open World</span>
+        </div>
+      </div>
+
+      <!-- Strategy -->
+      <div class="game-card forest-card fade-up delay-3">
+        <span class="card-icon">🏰</span>
+        <h3>Strategy Games</h3>
+        <p>Command armies, build civilizations, and outwit rivals. Every decision shapes the fate of empires.</p>
+        <br/>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;">
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">RTS</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Turn-Based</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Tower Defense</span>
+        </div>
+      </div>
+
+      <!-- Platformer -->
+      <div class="game-card forest-card fade-up delay-4">
+        <span class="card-icon">🌿</span>
+        <h3>Platformer Adventure</h3>
+        <p>Run, jump, and dodge through enchanted worlds. Discover secrets in every hidden corner of the map.</p>
+        <br/>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;">
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">2D Platformer</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Metroidvania</span>
+        </div>
+      </div>
+
+      <!-- Escape Room -->
+      <div class="game-card forest-card fade-up delay-5">
+        <span class="card-icon">🔐</span>
+        <h3>Escape Room</h3>
+        <p>You're trapped. Find the clues, solve the riddles, and escape before time runs out. Can you do it?</p>
+        <br/>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;">
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Horror</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Mystery</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Sci-Fi</span>
+        </div>
+      </div>
+
+      <!-- Survival -->
+      <div class="game-card forest-card fade-up delay-5">
+        <span class="card-icon">🏕️</span>
+        <h3>Survival Games</h3>
+        <p>Craft, explore, and endure the wilderness. Resources are scarce and danger is everywhere.</p>
+        <br/>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;">
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Crafting</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Sandbox</span>
+          <span style="background:rgba(0,180,80,0.1);border:1px solid rgba(0,200,100,0.3);padding:0.2rem 0.6rem;border-radius:4px;">Rogue-lite</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:3.5rem;" class="fade-up">
+      <a href="feedback.html" class="btn btn-forest" style="font-size:1rem;padding:1rem 2.8rem;">
+        Next: Give Feedback →
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    © 2025 Game Arena — Puzzle Realm &nbsp;|&nbsp; All Rights Reserved
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Falling leaves
+    const leavesEl = document.getElementById('leaves');
+    const leafEmojis = ['🍃','🍀','🌿','🍂'];
+    for (let i = 0; i < 18; i++) {
+      const l = document.createElement('div');
+      l.className = 'leaf';
+      l.textContent = leafEmojis[Math.floor(Math.random()*leafEmojis.length)];
+      l.style.cssText = `
+        --lx:${Math.random()*100}%;
+        --sz:${0.8 + Math.random()*0.8}rem;
+        --dur:${(7 + Math.random()*6).toFixed(1)}s;
+        --delay:-${(Math.random()*8).toFixed(1)}s;
+      `;
+      leavesEl.appendChild(l);
+    }
+
+    // Fireflies
+    const ffEl = document.getElementById('fireflies');
+    for (let i = 0; i < 25; i++) {
+      const ff = document.createElement('div');
+      ff.className = 'firefly';
+      const colors = ['#00ffaa','#00ff66','#66ffcc','#00ccff'];
+      const col = colors[Math.floor(Math.random()*colors.length)];
+      ff.style.cssText = `
+        top:${10 + Math.random()*80}%;
+        left:${5 + Math.random()*90}%;
+        background:${col};
+        box-shadow:0 0 6px ${col},0 0 12px ${col};
+        --dur:${(5 + Math.random()*5).toFixed(1)}s;
+        --dx:${(Math.random()*60-30).toFixed(0)}px;
+        --dy:${(Math.random()*-80-20).toFixed(0)}px;
+        --dx2:${(Math.random()*40-20).toFixed(0)}px;
+        --dy2:${(Math.random()*-120-40).toFixed(0)}px;
+        animation-delay:-${(Math.random()*5).toFixed(1)}s;
+      `;
+      ffEl.appendChild(ff);
+    }
+
+    // Puzzle pieces
+    const ppEl = document.getElementById('puzzlePieces');
+    const pEmojis = ['🧩','⭐','💎','🗝️','🔮','🍀','🌟'];
+    for (let i = 0; i < 12; i++) {
+      const p = document.createElement('div');
+      p.className = 'puzzle-piece';
+      p.textContent = pEmojis[Math.floor(Math.random()*pEmojis.length)];
+      p.style.cssText = `
+        top:${Math.random()*90}%;
+        left:${Math.random()*95}%;
+        --sz:${1 + Math.random()*2}rem;
+        --dur:${(8 + Math.random()*8).toFixed(1)}s;
+        --dx:${(Math.random()*60-30).toFixed(0)}px;
+        --dy:${(Math.random()*-60+10).toFixed(0)}px;
+        --rot:${(Math.random()*180-90).toFixed(0)}deg;
+        animation-delay:-${(Math.random()*8).toFixed(1)}s;
+      `;
+      ppEl.appendChild(p);
+    }
+
+    // Hamburger
+    document.getElementById('hamburger').addEventListener('click', () =>
+      document.getElementById('navLinks').classList.toggle('open')
+    );
+  </script>
+</body>
+</html>
