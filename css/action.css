@@ -1,4 +1,4 @@
-/* ===== ACTION GAMES PAGE — Fire & Lava Theme ===== */
+/* ===== ACTION GAMES PAGE  ===== */
 
 body.action-page {
   background: #0a0000;
@@ -6,7 +6,6 @@ body.action-page {
   overflow-x: hidden;
 }
 
-/* ===== LAVA BACKGROUND ===== */
 .lava-bg {
   position: fixed;
   inset: 0;
@@ -21,7 +20,6 @@ body.action-page {
   50%       { opacity: 0.75; }
 }
 
-/* Lava cracks */
 .lava-cracks {
   position: fixed;
   inset: 0;
@@ -39,7 +37,6 @@ body.action-page {
   to   { background-position: 120px 120px, 80px 80px; }
 }
 
-/* ===== FLAMES ===== */
 .flames-container {
   position: fixed;
   bottom: 0;
@@ -102,7 +99,6 @@ body.action-page {
   to   { transform: translateX(-50%) scaleY(0.8); }
 }
 
-/* ===== ACTION HERO ===== */
 .action-hero {
   position: relative;
   z-index: 1;
@@ -145,7 +141,6 @@ body.action-page {
   opacity: 0;
 }
 
-/* ===== RACING CAR ANIMATION ===== */
 .racing-track {
   position: relative;
   z-index: 1;
@@ -233,7 +228,6 @@ body.action-page {
   to   { transform: scale(1.1)  rotate(3deg);  filter: drop-shadow(0 0 15px #ff6600); }
 }
 
-/* ===== EXPLOSION PARTICLES ===== */
 .explosion-ring {
   position: absolute;
   top: 50%; left: 50%;
@@ -253,7 +247,6 @@ body.action-page {
   100% { width: 300px; height: 300px; opacity: 0; }
 }
 
-/* ===== BULLET TRAIL ===== */
 .bullet-trail {
   position: fixed;
   top: 50%;
@@ -273,11 +266,9 @@ body.action-page {
   to   { left: 110%;  transform: translateY(-50%); opacity: 0; }
 }
 
-/* NAV */
 body.action-page .nav-logo { color: #ff6622; }
 body.action-page .nav-links a:hover { color: #ff6622; }
 
-/* footer */
 body.action-page .site-footer {
   color: rgba(255,180,100,0.35);
   border-top-color: rgba(255,68,0,0.1);
@@ -286,7 +277,6 @@ body.action-page .site-footer {
 .action-section .section-title { color: #ff6622; }
 .action-section .section-subtitle { color: rgba(255,200,150,0.65); }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   .flames-container .flame:nth-child(n+6) { display: none; }
   .racing-track { height: 60px; }
