@@ -1,6 +1,6 @@
-# 🎮 Game Arena
+# 🎮 Game Baazi
 
-A 4-page fully animated, responsive website for **Game Arena** — built with **HTML & CSS only**.
+A 4-page fully animated, responsive website for **Game Baazi** — built with **HTML & CSS only**.
 
 ## Pages
 
