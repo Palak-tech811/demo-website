@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Realm - Arcade X</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Strategy Specific Page Styles */
+        .strategy-banner {
+            background: linear-gradient(180deg, rgba(7, 7, 10, 0.4) 0%, rgba(7, 7, 10, 0.95) 100%),
+                        url('assets/dragons.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+        /* Cruising Dragons Animation */
+        .sky-animation-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 2;
+        }
+        .flying-dragon-1 {
+            position: absolute;
+            top: 15%;
+            left: -150px;
+            width: 120px;
+            height: 60px;
+            background: radial-gradient(circle, rgba(255, 189, 0, 0.3) 0%, transparent 70%);
+            clip-path: polygon(0% 50%, 30% 0%, 70% 30%, 100% 50%, 70% 70%, 30% 100%);
+            animation: cruise-right 25s linear infinite;
+            filter: blur(1px);
+        }
+        .flying-dragon-2 {
+            position: absolute;
+            top: 40%;
+            right: -150px;
+            width: 100px;
+            height: 50px;
