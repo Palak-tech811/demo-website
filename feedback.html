@@ -1,233 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game Baazi — Feedback</title>
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/feedback.css" />
-</head>
-<body class="feedback-page">
-
-  <!-- Backgrounds -->
-  <div class="galaxy-bg"></div>
-  <div class="space-stars" id="spaceStars"></div>
-
-  <!-- Shooting stars -->
-  <div class="shooting-star" style="--top:15%; --dur:5s;  --delay:0s;"></div>
-  <div class="shooting-star" style="--top:35%; --dur:7s;  --delay:2.5s;"></div>
-  <div class="shooting-star" style="--top:55%; --dur:4.5s;--delay:1.2s;"></div>
-  <div class="shooting-star" style="--top:75%; --dur:6s;  --delay:3.8s;"></div>
-
-  <!-- Navigation -->
-  <nav class="nav">
-    <a class="nav-logo" href="index.html">🚀 GAME Baazi</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="action.html">Action</a></li>
-      <li><a href="puzzle.html">Puzzle &amp; Adventure</a></li>
-      <li><a href="feedback.html" class="active">Feedback</a></li>
-    </ul>
-  </nav>
-
-  <!-- ===== FEEDBACK HERO ===== -->
-  <section class="feedback-hero">
-    <h1 class="feedback-title fade-up">Mission Control</h1>
-    <p class="feedback-subtitle fade-up delay-1">Send your signal to the game universe</p>
-
-    <!-- Planet -->
-    <div class="planet-wrapper fade-up delay-2">
-      <div class="planet-orbit"></div>
-      <div class="planet"></div>
-    </div>
-  </section>
-
-  <!-- ===== FEEDBACK FORM ===== -->
-  <section class="form-section">
-    <div class="form-card">
-      <h2 style="font-family:'Orbitron',sans-serif;font-size:1.3rem;font-weight:700;color:#9966ff;letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:0.4rem;">
-        📡 Transmission Form
-      </h2>
-      <p style="text-align:center;font-size:0.9rem;color:rgba(180,160,255,0.6);letter-spacing:1px;margin-bottom:1.8rem;">
-        Your feedback helps us build a better arena
-      </p>
-
-      <form id="feedbackForm" novalidate>
-
-        <!-- Name -->
-        <div class="form-group">
-          <label class="form-label" for="name">Commander Name</label>
-          <input
-            type="text"
-            id="name"
-            class="form-input"
-            placeholder="Enter your name…"
-            required
-          />
-        </div>
-
-        <!-- Email -->
-        <div class="form-group">
-          <label class="form-label" for="email">Transmission Frequency (Email)</label>
-          <input
-            type="email"
-            id="email"
-            class="form-input"
-            placeholder="your@email.com"
-            required
-          />
-        </div>
-
-        <!-- Game Category -->
-        <div class="form-group">
-          <label class="form-label" for="category">Favourite Game Category</label>
-          <select id="category" class="form-select">
-            <option value="">— Select category —</option>
-            <option value="fps">First-Person Shooter (FPS)</option>
-            <option value="racing">Racing</option>
-            <option value="fighting">Fighting</option>
-            <option value="puzzle">Puzzle</option>
-            <option value="rpg">Role-Playing (RPG)</option>
-            <option value="strategy">Strategy</option>
-            <option value="platformer">Platformer</option>
-            <option value="survival">Survival</option>
-            <option value="battle-royale">Battle Royale</option>
-          </select>
-        </div>
-
-        <!-- Star Rating -->
-        <div class="rating-group">
-          <span class="rating-label">Overall Arena Rating</span>
-          <div class="star-rating">
-            <input type="radio" id="s5" name="rating" value="5" />
-            <label for="s5" title="5 stars">★</label>
-            <input type="radio" id="s4" name="rating" value="4" />
-            <label for="s4" title="4 stars">★</label>
-            <input type="radio" id="s3" name="rating" value="3" />
-            <label for="s3" title="3 stars">★</label>
-            <input type="radio" id="s2" name="rating" value="2" />
-            <label for="s2" title="2 stars">★</label>
-            <input type="radio" id="s1" name="rating" value="1" />
-            <label for="s1" title="1 star">★</label>
-          </div>
-        </div>
-
-        <!-- Features enjoyed -->
-        <div class="form-group">
-          <label class="form-label">What Did You Love?</label>
-          <div class="checkbox-group">
-            <label class="checkbox-label"><input type="checkbox" value="gameplay" /> 🎮 Gameplay</label>
-            <label class="checkbox-label"><input type="checkbox" value="graphics" /> 🖼️ Graphics</label>
-            <label class="checkbox-label"><input type="checkbox" value="sound"    /> 🔊 Sound Design</label>
-            <label class="checkbox-label"><input type="checkbox" value="story"    /> 📖 Story</label>
-            <label class="checkbox-label"><input type="checkbox" value="multiplayer" /> 👥 Multiplayer</label>
-            <label class="checkbox-label"><input type="checkbox" value="variety"  /> 🎲 Game Variety</label>
-            <label class="checkbox-label"><input type="checkbox" value="ui"       /> 🌐 UI / Design</label>
-            <label class="checkbox-label"><input type="checkbox" value="perf"     /> ⚡ Performance</label>
-          </div>
-        </div>
-
-        <!-- Comments -->
-        <div class="form-group">
-          <label class="form-label" for="message">Your Signal (Message)</label>
-          <textarea
-            id="message"
-            class="form-textarea"
-            placeholder="Tell us anything — praise, bugs, ideas, or wishes…"
-          ></textarea>
-        </div>
-
-        <!-- How did you hear about us -->
-        <div class="form-group">
-          <label class="form-label" for="source">How Did You Find The Arena?</label>
-          <select id="source" class="form-select">
-            <option value="">— Select —</option>
-            <option value="friend">Friend / Referral</option>
-            <option value="social">Social Media</option>
-            <option value="search">Search Engine</option>
-            <option value="ad">Advertisement</option>
-            <option value="youtube">YouTube</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <!-- Submit -->
-        <button type="submit" class="btn-space">
-          <span>🚀 Launch Transmission</span>
-        </button>
-
-      </form>
-    </div>
-  </section>
-
-  <!-- Toast notification -->
-  <div class="toast" id="toast">
-    ✅ Transmission received! Thanks, Commander!
-  </div>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    © 2025 Game Baazi &nbsp;|&nbsp; Mission Control &nbsp;|&nbsp; All Rights Reserved
-  </footer>
-
-  <!-- JS -->
-  <script>
-    // Space stars
-    const ssEl = document.getElementById('spaceStars');
-    for (let i = 0; i < 220; i++) {
-      const s = document.createElement('div');
-      s.className = 'space-star';
-      const size = Math.random() * 2.8 + 0.4;
-      s.style.cssText = `
-        width:${size}px; height:${size}px;
-        top:${Math.random()*100}%; left:${Math.random()*100}%;
-        --dur:${(2 + Math.random()*4).toFixed(1)}s;
-        animation-delay:${(Math.random()*4).toFixed(1)}s;
-      `;
-      ssEl.appendChild(s);
-    }
-
-    // Hamburger
-    document.getElementById('hamburger').addEventListener('click', () =>
-      document.getElementById('navLinks').classList.toggle('open')
-    );
-
-    // Form submit
-    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      if (!name) {
-        document.getElementById('name').focus();
-        document.getElementById('name').style.borderColor = '#ff4466';
-        return;
-      }
-      const email = document.getElementById('email').value.trim();
-      if (!email || !email.includes('@')) {
-        document.getElementById('email').focus();
-        document.getElementById('email').style.borderColor = '#ff4466';
-        return;
-      }
-
-      // Show toast
-      const toast = document.getElementById('toast');
-      toast.textContent = `✅ Transmission received, ${name}! Thanks for your feedback!`;
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-        this.reset();
-        // reset border colors
-        document.querySelectorAll('.form-input,.form-select,.form-textarea')
-          .forEach(el => el.style.borderColor = '');
-      }, 4000);
-    });
-
-    // Input color reset
-    document.querySelectorAll('.form-input').forEach(el => {
-      el.addEventListener('input', () => el.style.borderColor = '');
-    });
-  </script>
-</body>
-</html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Feedback - Arcade X</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Feedback Specific Page Styles */
+        .feedback-banner {
+            background: linear-gradient(180deg, rgba(7, 7, 10, 0.4) 0%, rgba(7, 7, 10, 0.95) 100%),
+                        url('assets/dark_castle.jpg') no-repeat center center/cover;
+            position: relative;
+            background-position: bottom center;
+        }
+        .feedback-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #09090e;
+            border: 2px solid rgba(57, 255, 20, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6), 
+                        0 0 15px rgba(57, 255, 20, 0.05);
+            border-radius: 16px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Quest Board scan lines */
+        .feedback-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--neon-green);
+            box-shadow: 0 0 15px var(--neon-green);
+            animation: scanner-sweep 6s linear infinite;
+            z-index: 10;
+        }
+        .quest-form {
+            display: flex;
