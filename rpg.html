@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Playing Realm - Arcade X</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* RPG Specific Page Styles */
+        .rpg-banner {
+            background: linear-gradient(180deg, rgba(7, 7, 10, 0.4) 0%, rgba(7, 7, 10, 0.95) 100%),
+                        url('assets/masked_figure.jpg') no-repeat center center/cover;
+            position: relative;
+        }
+        /* Rotating Magical Circle behind Hero card */
+        .magic-aura-container {
+            position: absolute;
+            width: 130%;
+            height: 130%;
+            top: -15%;
+            left: -15%;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+        .magic-ring {
+            width: 450px;
+            height: 450px;
+            border: 2px dashed rgba(176, 38, 255, 0.25);
+            border-radius: 50%;
+            position: absolute;
+            animation: rotate-clockwise 20s linear infinite;
+        }
+        .magic-ring::before {
+            content: '';
+            position: absolute;
+            inset: 15px;
+            border: 1px solid rgba(176, 38, 255, 0.15);
+            border-radius: 50%;
+        }
